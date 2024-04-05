@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="dark_blue">#34495E</color>
+    <color name="app_identity">#354961</color>
+    <color name="app_identity_dark">#243444</color>
+    <color name="light_blue">#1B60A9</color>
+    <color name="green_shamrock">#038C41</color>
+    <color name="vert_mil">#1D4B08</color>
+    <color name="divider_color">#E1E1E1</color>
+    <color name="divider_header_color">#2EE1E1E1</color>
+    <color name="dark_gray">#606060</color>
+    <color name="message_stroke_color">#8A8A8A</color>
+    <color name="shade_gray">#888888</color>
+    <color name="light_gray">#DDDADA</color>
+    <color name="shade_gray2">#7A7A7A</color>
+    <color name="orange">#E04A3A</color>
+    <color name="o_black">#14000000</color>
+    <color name="rowTable_color">#F1F1F1</color>
+
+
+
+
+
+
+
+</resources>
