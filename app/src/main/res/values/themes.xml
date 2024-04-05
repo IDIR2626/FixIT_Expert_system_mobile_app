@@ -17,4 +17,12 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="qualify_problem_question">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
 </resources>
