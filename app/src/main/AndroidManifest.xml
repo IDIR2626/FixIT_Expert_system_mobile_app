@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FixIT"
         tools:targetApi="31">
         <activity
+            android:name=".SubSymptomsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SymptomsActivity"
+            android:exported="false" />
+        <activity
             android:name=".NetworkProblem"
             android:exported="false" />
         <activity

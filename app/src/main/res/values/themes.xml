@@ -25,4 +25,20 @@
         <item name="android:letterSpacing">0</item>
     </style>
 
+    <style name="symptom_list_item_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="sub_problem_title">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
 </resources>
