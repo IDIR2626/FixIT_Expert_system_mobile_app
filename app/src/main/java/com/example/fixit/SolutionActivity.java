@@ -11,9 +11,9 @@ public class SolutionActivity extends AppCompatActivity {
     Boolean isLaptop, isDesktop, isWindows, isLinux, haveHardwareProblem, haveSoftwareProblem, haveNetworkProblem;
     TextView solutionTextView;
     String solutionText ;
-    String computer, operatingSystem, hardware, software, network, parentProb, subProb;
+    String computer, operatingSystem, hardware, software, network;
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +32,28 @@ public class SolutionActivity extends AppCompatActivity {
         parentSymptomName = getIntent().getStringExtra("parentSymptom");
         subSymptomName = getIntent().getStringExtra("subSymptom");
 
-        if (isLaptop){
-            computer = "laptop";
-        }else {
-            computer = "desktop";
-        }
+        //computer
+        if (isLaptop){computer = "laptop";}else {computer = "desktop";}
+        //operating system
+        if (isWindows){operatingSystem = "Windows";}else {operatingSystem="Linux";}
+        //hardware
+        if (haveHardwareProblem){hardware ="Yes";}else {hardware = "No";}
+        //software
+        if (haveSoftwareProblem){software = "Yes";}else {software ="No";}
+        //Network
+        if (haveNetworkProblem){network = "Yes";}else {network = "No";}
+        //Parent Problem
 
+
+        solutionTextView.setText(
+                "1-Computer: " + computer + "\n"
+                        +"2-Operating System: " + operatingSystem + "\n"
+                        +"3-Have a hardware problem: " + hardware + "\n"
+                        +"4-Have a software problem: " + software + "\n"
+                        +"5-Have a network problem" + network + "\n"
+                        +"6-The main Symptom: " + parentSymptomName + "\n"
+                        +"7-The sub Symptom: " + subSymptomName + "\n"
+        );
 
     }
 }
