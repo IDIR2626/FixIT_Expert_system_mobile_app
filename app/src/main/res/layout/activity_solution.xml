@@ -6,4 +6,91 @@
     android:layout_height="match_parent"
     tools:context=".SolutionActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:backgroundTint="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:title="Solution" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="665dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topAppBar"
+        tools:ignore="NotSibling,SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/solution_illustration"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="189dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#A2FF86"
+                app:cardCornerRadius="8dp"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Solution"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:text="Bonjour cette solution est
+une première etape pour
+la suite de ce projet, j’esp-
+ère que cette application
+va apporter de l’aide dans
+le domaine du consultation
+informatique"
+
+                android:textSize="22sp"
+                android:textColor="@color/dark_blue"
+                android:fontFamily="@font/poppins"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
