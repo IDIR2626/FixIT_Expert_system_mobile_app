@@ -9,18 +9,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.fixit.R;
+import com.example.fixit.expert_system.Problem;
 
 import java.util.ArrayList;
-import java.util.zip.Inflater;
+import java.util.List;
 
 public class CustomAdapter extends BaseAdapter {
     Context context;
-    ArrayList<String> symptoms;
+    List<String> symptoms;
     int image;
 
     LayoutInflater inflater;
 
-    public CustomAdapter(Context context, ArrayList<String> symptoms, int image){
+    public CustomAdapter(Context context, List<String> symptoms, int image){
         this.context = context;
         this.symptoms = symptoms;
         this.image = image;

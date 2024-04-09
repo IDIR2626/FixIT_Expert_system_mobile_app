@@ -13,7 +13,7 @@ public class ExpertSystem {
         workingMemory = new WorkingMemory();
     }
 
-    private List<Problem> initializeKnowledgeBase() {
+    public List<Problem> initializeKnowledgeBase() {
         List<Problem> problems = new ArrayList<>();
 
         // Problem 1 (Computer On Screen Off)
@@ -77,4 +77,5 @@ public class ExpertSystem {
 
         return "**Diagnosis:** We couldn't diagnose the problem yet. Consider providing more information.";
     }
+
 }
