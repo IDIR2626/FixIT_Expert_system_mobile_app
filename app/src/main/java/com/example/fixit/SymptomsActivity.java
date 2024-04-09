@@ -19,40 +19,48 @@ import java.util.List;
 
 public class SymptomsActivity extends AppCompatActivity {
     ListView listView;
-    List<String> symptoms ;
+    Boolean isLaptop, isDesktop, isWindows, isLinux, haveHardwareProblem, haveSoftwareProblem, haveNetworkProblem;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_symptoms);
 
-        listView = findViewById(R.id.list_view);
-//        symptoms = new ArrayList<String>();
-////        symptoms.add("Computer on screen of");
-////        symptoms.add("Computer on screen ERROR");
-////        symptoms.add("Computer off screen of");
-////        symptoms.add("Blue screens");
-////        symptoms.add("Beeps");
+        //get intent extra data
+        isDesktop = getIntent().getBooleanExtra("isDesktop", false);
+        isLaptop = getIntent().getBooleanExtra("isLaptop", true);
+        isWindows = getIntent().getBooleanExtra("isWindows", true);
+        isLinux = getIntent().getBooleanExtra("isLinux", false);
+        haveHardwareProblem = getIntent().getBooleanExtra("haveHardwareProblem", false);
+        haveSoftwareProblem = getIntent().getBooleanExtra("haveSoftwareProblem", true);
+        haveNetworkProblem = getIntent().getBooleanExtra("haveNetworkProblem", false);
 
+        //getting the main symptoms
         ExpertSystem expertSystem = new ExpertSystem();
-
         List<Problem> symptoms = expertSystem.initializeKnowledgeBase();
-
         List<String> symptomsNames = new ArrayList<>();
         for (Problem problem : symptoms){
             symptomsNames.add(problem.getName());
         }
 
+        listView = findViewById(R.id.list_view);
         CustomAdapter customAdapter = new CustomAdapter(this, symptomsNames, R.drawable.baseline_arrow_forward_ios_24);
         listView.setAdapter(customAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                String symptomName = customAdapter.getItem(position);
+                String parentSymptomName = customAdapter.getItem(position);
 
                 Intent intent = new Intent(SymptomsActivity.this, SubSymptomsActivity.class);
-                intent.putExtra("ParentSymptom", symptomName);
+                intent.putExtra("isLaptop", isLaptop);
+                intent.putExtra("isDesktop", isDesktop);
+                intent.putExtra("isWindows", isWindows);
+                intent.putExtra("isLinux", isLinux);
+                intent.putExtra("haveHardwareProblem", haveHardwareProblem);
+                intent.putExtra("haveSoftwareProblem", haveSoftwareProblem);
+                intent.putExtra("haveNetworkProblem", haveNetworkProblem);
+                intent.putExtra("parentSymptom", parentSymptomName);
                 startActivity(intent);
 
 
