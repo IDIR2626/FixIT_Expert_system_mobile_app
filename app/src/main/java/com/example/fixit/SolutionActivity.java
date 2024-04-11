@@ -6,6 +6,8 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.fixit.expert_system.ExpertSystem;
+
 public class SolutionActivity extends AppCompatActivity {
     String parentSymptomName,subSymptomName;
     Boolean isLaptop, isDesktop, isWindows, isLinux, haveHardwareProblem, haveSoftwareProblem, haveNetworkProblem;
@@ -44,16 +46,19 @@ public class SolutionActivity extends AppCompatActivity {
         if (haveNetworkProblem){network = "Yes";}else {network = "No";}
         //Parent Problem
 
+        ExpertSystem expertSystem = new ExpertSystem();
 
-        solutionTextView.setText(
-                "1-Computer: " + computer + "\n"
-                        +"2-Operating System: " + operatingSystem + "\n"
-                        +"3-Have a hardware problem: " + hardware + "\n"
-                        +"4-Have a software problem: " + software + "\n"
-                        +"5-Have a network problem" + network + "\n"
-                        +"6-The main Symptom: " + parentSymptomName + "\n"
-                        +"7-The sub Symptom: " + subSymptomName + "\n"
-        );
+        solutionText = expertSystem.diagnose(isLaptop, isDesktop, haveHardwareProblem, haveSoftwareProblem, haveNetworkProblem, parentSymptomName, subSymptomName);
+//        solutionTextView.setText(
+//                "1-Computer: " + computer + "\n"
+//                        +"2-Operating System: " + operatingSystem + "\n"
+//                        +"3-Have a hardware problem: " + hardware + "\n"
+//                        +"4-Have a software problem: " + software + "\n"
+//                        +"5-Have a network problem" + network + "\n"
+//                        +"6-The main Symptom: " + parentSymptomName + "\n"
+//                        +"7-The sub Symptom: " + subSymptomName + "\n"
+//        );
 
+        solutionTextView.setText(solutionText);
     }
 }
