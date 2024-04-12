@@ -42,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_margin="12dp"
             >
 
             <ImageView
@@ -82,6 +83,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/dark_blue"
                 android:fontFamily="@font/poppins"
+                android:padding="12dp"
                 />
         </LinearLayout>
     </ScrollView>
