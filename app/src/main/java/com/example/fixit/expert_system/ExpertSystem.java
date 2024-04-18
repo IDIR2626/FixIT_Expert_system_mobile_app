@@ -339,6 +339,92 @@ public class ExpertSystem {
                                 "4. Consult a Technician: If the above steps don't resolve the problem, consider seeking help from a qualified computer technician. They can diagnose the problem further, potentially attempt data recovery from the existing system files, or reinstall Windows as a last resort.";
                     }
                 }
+            }else {
+                if (parentSymptomName.equals("Computer On Screen Error")){
+                    if (subSymptomName.equals("Boot MGR Missing")){
+                        solution = "The Boot Manager, a critical software component responsible for loading the operating system, might be missing on your computer. Here's how to attempt a repair:\n" +
+                                "\n" +
+                                "**Automatic Repair (Windows):**\n" +
+                                "1. Insert your Windows installation media (USB drive or DVD). If you don't have it, you can create one using another computer and Microsoft's Media Creation Tool (https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).\n" +
+                                "2. Boot your computer from the installation media. This usually involves pressing a specific key (e.g., F12, Del) during startup to enter the boot menu and selecting the media.\n" +
+                                "3. On the initial installation screen, click on \"Repair your computer\" instead of \"Install Now.\"\n" +
+                                "4. Select \"Troubleshoot\" and then \"Advanced options.\"\n" +
+                                "5. Choose \"Startup Repair\" and follow the on-screen instructions. This process will attempt to automatically diagnose and fix the Boot Manager issue.\n" +
+                                "\n" +
+                                "**Bootrec.exe (Advanced):**\n" +
+                                "**WARNING:**  These steps involve using command-line tools and modifying system configuration. Proceed with caution and only if comfortable. If unsure, consult a technician.\n" +
+                                "\n" +
+                                "1. Follow steps 1 and 2 from the Automatic Repair section to boot from your Windows installation media.\n" +
+                                "2. Click on \"Repair your computer\" on the initial installation screen.\n" +
+                                "3. Select \"Troubleshoot\" and then \"Command Prompt.\"\n" +
+                                "4. In the Command Prompt window, type the following commands one by one, pressing Enter after each command:\n" +
+                                "     - bootrec /fixmbr\n" +
+                                "     - bootrec /fixboot\n" +
+                                "     - bootrec /rebuildbcd\n" +
+                                "5. These commands attempt to repair the Master Boot Record (MBR), Boot Sector, and rebuild the Boot Configuration Data (BCD) for your system.\n" +
+                                "6. After running the commands, type \"exit\" and restart your computer.\n" +
+                                "\n" +
+                                "**Consult a Technician:**  If the above steps don't resolve the issue, consider seeking help from a qualified computer technician. They can diagnose the problem further and potentially reinstall the operating system if necessary.";
+                    } else if (subSymptomName.equals("Boot Device Not Found")) {
+                        solution = "The computer might not be detecting a bootable device (like a hard drive or SSD) containing your operating system. Here's how to troubleshoot:\n" +
+                                "\n" +
+                                "1. Check Boot Order: Enter your computer's BIOS or UEFI setup menu (usually by pressing a specific key during startup, like F2, Del, or Esc). Consult your computer's manual or manufacturer's website for specific instructions on accessing the BIOS/UEFI menu.\n" +
+                                "\n" +
+                                "2. Ensure the boot drive is listed first in the boot order priority. The boot order determines which device the computer attempts to load the operating system from first.\n" +
+                                "\n" +
+                                "3. Check Boot Device Connection: If the boot drive is listed correctly in the BIOS/UEFI but not detected, open your computer case (if comfortable) and ensure the data cable (e.g., SATA) connecting the storage drive to the motherboard is securely plugged in at both ends.\n" +
+                                "\n" +
+                                "4. Test with Another Drive (if possible): If you have another bootable drive (like a USB drive with a live operating system), try connecting it and setting it as the first boot priority in the BIOS/UEFI. If the computer boots from the other drive, it suggests an issue with your original boot drive.\n" +
+                                "\n" +
+                                "5. Consult a Technician: If the above steps don't resolve the problem, consider seeking help from a qualified computer technician. They can diagnose the issue further, such as checking for hardware failures in the storage drive or potential operating system corruption that might require reinstallation.";
+                    } else if (subSymptomName.equals("Windows Failed to start")) {
+                        solution = "Use System Restore: Boot into the 'Advanced Startup Options' (accessible by repeatedly pressing F8 during startup) and choose 'Repair Your Computer'. From there, select 'System Restore' to roll back to a previous working state.\n" +
+                                "\n" +
+                                "Check Disk for Errors: Use the Windows 'Check Disk' utility (chkdsk) to scan and fix errors on your hard drive. Open Command Prompt as administrator and run 'chkdsk /f /r'.";
+                    } else if (subSymptomName.equals("Missing system file (\\system32\\hal.dll)")) {
+                        solution = "A critical system file named 'hal.dll' located in \\system32\\ is missing. This file is essential for Windows to boot up properly. Here's what you can try:\n" +
+                                "\n" +
+                                "**WARNING:**  These steps involve modifying system files and might require administrative privileges. Proceed with caution and only if comfortable. If unsure, consult a technician.\n" +
+                                "\n" +
+                                "1. System Restore (if possible): If you recently created a system restore point before the issue occurred, you can attempt to restore your system to that point. This might revert any changes that caused the hal.dll file to go missing.\n" +
+                                "\n" +
+                                "2. System File Checker (SFC):** (Windows Vista and later)**\n" +
+                                "     - Open Command Prompt as administrator (right-click Command Prompt and select \"Run as administrator\").\n" +
+                                "     - Type the following command and press Enter:\n" +
+                                "           sfc /scannow\n" +
+                                "     - This command scans for missing or corrupt system files, including hal.dll, and attempts to repair them.\n" +
+                                "\n" +
+                                "3. DISM (Deployment Image Servicing and Management):** (if SFC fails)**\n" +
+                                "     - If SFC doesn't resolve the issue, you can try DISM, a more robust tool for repairing system image corruption.\n" +
+                                "     - Open Command Prompt as administrator (refer to step 2. above).\n" +
+                                "     - Type the following command and press Enter:\n" +
+                                "           DISM /Online /Cleanup-Image /RestoreHealth\n" +
+                                "     - This command can take longer to run than SFC.\n" +
+                                "\n" +
+                                "4. Reinstall Windows (Last Resort): If the above steps fail, reinstalling Windows might be necessary to replace the missing system file. This will erase all your data and applications, so ensure you have a backup before proceeding.\n" +
+                                "\n" +
+                                "5. Consult a Technician: If you're uncomfortable with these steps or they don't resolve the issue, consider seeking help from a qualified computer technician. They can diagnose the problem further and potentially repair the system or reinstall Windows if necessary.";
+                    } else if (subSymptomName.equals("Missing system file (\\Windows\\System32\\Config\\System)")) {
+                        solution = "A critical system file named 'system' located in \\Windows\\System32\\Config\\ is missing. This file plays a vital role in system configuration and booting. Here's what you can try:\n" +
+                                "\n" +
+                                "**WARNING:**  These steps involve modifying system files and might require administrative privileges. Proceed with caution and only if comfortable. If unsure, consult a technician.\n" +
+                                "\n" +
+                                "1. System Restore (if possible): If you recently created a system restore point before the issue occurred, you can attempt to restore your system to that point. This might revert any changes that caused the system file to go missing.\n" +
+                                "\n" +
+                                "2. Boot to Safe Mode with Command Prompt:** Booting into Safe Mode with Command Prompt loads a minimal set of drivers and programs, allowing you to potentially access and repair system files.\n" +
+                                "     - Consult your computer's manual or manufacturer's website for specific instructions on entering Safe Mode with Command Prompt. It often involves pressing a key during startup (like F8).\n" +
+                                "     - Once in Safe Mode with Command Prompt, you might be able to use commands like `copy` or `system file checker` (SFC) to attempt copying a healthy system file from another location or running an SFC scan to repair corrupted system files.\n" +
+                                "\n" +
+                                "3. Automatic Startup Repair (Windows):** (Windows Vista and later)**\n" +
+                                "     - Insert your Windows installation media (USB drive or DVD). If you don't have it, you can create one using another computer and Microsoft's Media Creation Tool (https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).\n" +
+                                "     - Boot your computer from the installation media.\n" +
+                                "     - On the initial installation screen, click on \"Repair your computer\" instead of \"Install Now.\"\n" +
+                                "     - Select \"Troubleshoot\" and then \"Advanced options.\"\n" +
+                                "     - Choose \"Startup Repair\" and follow the on-screen instructions. This process will attempt to automatically diagnose and fix the missing system file issue.\n" +
+                                "\n" +
+                                "4. Consult a Technician: If the above steps don't resolve the problem, consider seeking help from a qualified computer technician. They can diagnose the problem further, potentially attempt data recovery from the existing system files, or reinstall Windows as a last resort.";
+                    }
+                }
             }
 
         return solution;
