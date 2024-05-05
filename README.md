@@ -1,12 +1,12 @@
 
 
 
-# FixIt: Diagnose Your Computer Hardware Issues
+# FixIt: Diagnose Your Computer Issues
 
 
 ## Introduction
 
-FixIt is an Android application designed to be your personal expert system for diagnosing common computer hardware problems. Struggling to figure out why your computer isn't working? FixIt can guide you through a step-by-step troubleshooting process using its knowledge base of potential issues and symptoms.
+FixIt is an Android application designed to be your personal expert system for diagnosing common computer problems. Struggling to figure out why your computer isn't working? FixIt can guide you through a step-by-step troubleshooting process using its knowledge base of potential issues and symptoms.
 
 ## Features
 
