@@ -21,26 +21,34 @@ FixIt is an Android application designed to be your personal expert system for d
 
 * Android phone or tablet
 
-### Installation:
+## Getting Started
 
-1. Download the FixIt application from the Google Play Store (link to be added when available).
-2. Launch the FixIt app.
+### Prerequisites:
+
+* Android phone or tablet
+* Android Studio installed (https://developer.android.com/studio)  
+
+### Setting Up FixIt on Your Device
+
+ **Clone the FixIt Repository:**
+
 
 ## Usage
 
 1.  Select your computer type (Desktop or Laptop) on the Main Activity screen.
-2.  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/main_activity_screenshot.png)
-3.  Indicate your computer's operating system (Windows or Linux) on the Operating System Activity screen (see screenshot.
-4.  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/operating_system_activity_sceenshot.png)
-5.  Answer a series of questions about the potential issue by selecting "Yes" or "No" for Hardware, Software, and Network problems.
-6.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
-7.  Choose the symptom(s) that best describe your computer's problem from the Symptoms Activity list.
-8.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
-9.  If applicable, select any sub-symptoms that further detail the issue.
-10.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
-11.  FixIt will analyze your responses and present potential hardware problems along with troubleshooting steps or recommendations on the Solution Activity screen.
-12.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
+  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/main_activity_screenshot.png)
+2.  Indicate your computer's operating system (Windows or Linux) on the Operating System Activity screen (see screenshot.
+  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/operating_system_activity_sceenshot.png)
+3.  Answer a series of questions about the potential issue by selecting "Yes" or "No" for Hardware, Software, and Network problems.
+  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/software_activity_screenshot.png)
+  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/network_activity_screenshot.png)
 
+5.  Choose the symptom that best describe your computer's problem from the Symptoms Activity list.
+  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/symptoms_activity_screenshot.png)
+6.  If applicable, select any sub-symptoms that further detail the issue.
+  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/sub_symptom_activity_screenshot.png)
+7.  FixIt will analyze your responses and present potential hardware problems along with troubleshooting steps or recommendations on the Solution Activity screen.
+  ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/solution_activity_screenshot.png)
 ## Knowledge Base
 
 FixIt leverages a knowledge base containing a set of rules written in an "IF-THEN" format. These rules link specific symptoms to potential faulty hardware components.  This structured knowledge base allows FixIt to effectively reason about your computer's problem and suggest solutions.
