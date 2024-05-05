@@ -41,7 +41,7 @@ FixIt leverages a knowledge base containing a set of rules written in an "IF-THE
 ## Usage
 
 1.  Select your computer type (Desktop or Laptop) on the Main Activity screen.
-   ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/main_activity_screenshot.png)
+   ![plot](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/main_activity_screenshot.png)
 2.  Indicate your computer's operating system (Windows or Linux) on the Operating System Activity screen (see screenshot.
   ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/operating_system_activity_sceenshot.png)
 3.  Answer a series of questions about the potential issue by selecting "Yes" or "No" for Hardware, Software, and Network problems.
