@@ -29,7 +29,7 @@ FixIt is an Android application designed to be your personal expert system for d
 ## Usage
 
 1.  Select your computer type (Desktop or Laptop) on the Main Activity screen.
-2.  ![Main Window]([https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/main_activity_screenshot.png))
+2.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
 3.  Indicate your computer's operating system (Windows or Linux) on the Operating System Activity screen (see screenshot.
 4.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
 5.  Answer a series of questions about the potential issue by selecting "Yes" or "No" for Hardware, Software, and Network problems.
