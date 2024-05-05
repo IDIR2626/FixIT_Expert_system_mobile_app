@@ -50,7 +50,7 @@ FixIt leverages a knowledge base containing a set of rules written in an "IF-THE
 
 5.  Choose the symptom that best describe your computer's problem from the Symptoms Activity list.
   ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/symptoms_activity_screenshot.png)
-6.  If applicable, select any sub-symptoms that further detail the issue.
+6.  Select any sub-symptoms that further detail the issue.
   ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/sub_symptom_activity_screenshot.png)
 7.  FixIt will analyze your responses and present potential hardware problems along with troubleshooting steps or recommendations on the Solution Activity screen.
   ![Main Window](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/solution_activity_screenshot.png)
