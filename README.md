@@ -28,12 +28,18 @@ FixIt is an Android application designed to be your personal expert system for d
 
 ## Usage
 
-1.  Select your computer type (Desktop or Laptop) on the Main Activity screen (see screenshot [main_activity.png]).
-2.  Indicate your computer's operating system (Windows or Linux) on the Operating System Activity screen (see screenshot [operating_system_activity.png]).
-3.  Answer a series of questions about the potential issue by selecting "Yes" or "No" for Hardware, Software, and Network problems (see screenshots [hardware_activity.png, software_activity.png, network_activity.png]).
-4.  Choose the symptom(s) that best describe your computer's problem from the Symptoms Activity list (see screenshot [symptoms_activity.png]).
-5.  If applicable, select any sub-symptoms that further detail the issue (see screenshot [sub_symptoms_activity.png]).
-6.  FixIt will analyze your responses and present potential hardware problems along with troubleshooting steps or recommendations on the Solution Activity screen (see screenshot [solution_activity.png]).
+1.  Select your computer type (Desktop or Laptop) on the Main Activity screen.
+2.  ![Main Window]([https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png](https://github.com/IDIR2626/FixIT_Expert_system_mobile_app/blob/master/app/src/main/res/drawable/main_activity_screenshot.png))
+3.  Indicate your computer's operating system (Windows or Linux) on the Operating System Activity screen (see screenshot.
+4.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
+5.  Answer a series of questions about the potential issue by selecting "Yes" or "No" for Hardware, Software, and Network problems.
+6.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
+7.  Choose the symptom(s) that best describe your computer's problem from the Symptoms Activity list.
+8.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
+9.  If applicable, select any sub-symptoms that further detail the issue.
+10.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
+11.  FixIt will analyze your responses and present potential hardware problems along with troubleshooting steps or recommendations on the Solution Activity screen.
+12.  ![Main Window](https://github.com/IDIR2626/HackathonApp/blob/main/app/src/main/res/drawable/screenshot1.png)
 
 ## Knowledge Base
 
